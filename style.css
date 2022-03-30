@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#thanh-menu {
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	top: 0;
+	left: 0;
+	background-color: rgb(56, 55, 55);
+	transition: all 0.4s linear;
+}
+.menu {
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+#thanh-menu .menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+#thanh-menu .menu .logo {
+	display: flex;
+	align-items: center;
+	font-size: 25px;
+	color: white;
+	display: block;
+}
+#thanh-menu .menu .list-menu {
+	display: none;
+	color: white;
+	cursor: pointer;
+	font-size: 26px;
+}
+#thanh-menu .menu .list .xoa {
+	display: none;
+	color: black;
+	text-decoration: none;
+	font-size: 20px;
+}
+#thanh-menu .menu .list ul {
+	display: flex;
+	align-items: center;
+	margin-left: -20px;
+}
+#thanh-menu .menu .list ul li {
+	list-style: none;
+	margin-left: 20px;
+}
+#thanh-menu .menu .list ul li a {
+	text-decoration: none;
+	color: white;
+}
+@media only screen and (max-width: 800px) {
+	#thanh-menu .menu .list-menu {
+		display: block;
+	}
+	#thanh-menu .menu .list .xoa {
+		display: block;
+	}
+	#thanh-menu .menu .list {
+		position: fixed;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		top: 0;
+		right: 0;
+		background-color: rgb(56, 55, 55);
+		width: 50%;
+		height: 100vh;
+		transform: translateX(100%);
+		opacity: 0;
+		transition: all 0.4s linear;
+	}
+	#thanh-menu .menu .list-under {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	#thanh-menu .menu .list ul {
+		flex-direction: column;
+		align-items: flex-start;
+		padding-top: 100px;
+	}
+	#thanh-menu .menu .list ul li {
+		padding-left: 40px;
+		margin-top: 50px;
+	}
+	#thanh-menu .menu .list ul li a {
+		font-size: 22px;
+	}
+}
+#main {
+	padding-top: 90px;
+}
